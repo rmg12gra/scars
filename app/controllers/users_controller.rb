@@ -15,4 +15,12 @@ class UsersController < ApplicationController
    render 'new'
   end
  end
+
+ def show
+  if params[:id].to_i == current_user.id || current_user.id == 1 then
+   @user = User.find(params[:id])
+  else
+   redirect_to root_url, notice: "Unauthorised!"
+  end
+ end
 end
