@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  reg: MyString
+  model: MyString
+  class: MyString
+  repair: false
+  booking_id: 1
+
+two:
+  reg: MyString
+  model: MyString
+  class: MyString
+  repair: false
+  booking_id: 1

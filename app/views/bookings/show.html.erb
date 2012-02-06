@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date of departure:</b>
+  <%= @booking.date_of_departure %>
+</p>
+
+<p>
+  <b>Date of arrival:</b>
+  <%= @booking.date_of_arrival %>
+</p>
+
+<p>
+  <b>Collect:</b>
+  <%= @booking.collect %>
+</p>
+
+<p>
+	<b>Car Class:</b>
+	<%= @booking.car_class%>
+</p>
+<p>
+	<b>Delivery Address</b>
+	<%= @booking.booking_address%>
+</p>
+
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

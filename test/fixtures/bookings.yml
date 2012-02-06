@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date_of_departure: 2012-02-03 06:56:11
+  date_of_arrival: 2012-02-03 06:56:11
+  collect: false
+  user_id: 1
+
+two:
+  date_of_departure: 2012-02-03 06:56:11
+  date_of_arrival: 2012-02-03 06:56:11
+  collect: false
+  user_id: 1

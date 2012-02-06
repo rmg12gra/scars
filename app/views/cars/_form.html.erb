@@ -1,0 +1,37 @@
+<%= form_for(@car) do |f| %>
+  <% if @car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@car.errors.count, "error") %> prohibited this car from being saved:</h2>
+
+      <ul>
+      <% @car.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :reg %><br />
+    <%= f.text_field :reg %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br />
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :class %><br />
+    <%= f.text_field :class %>
+  </div>
+  <div class="field">
+    <%= f.label :repair %><br />
+    <%= f.check_box :repair %>
+  </div>
+  <div class="field">
+    <%= f.label :booking_id %><br />
+    <%= f.number_field :booking_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
