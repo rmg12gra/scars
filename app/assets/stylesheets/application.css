@@ -1,13 +1,108 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
-*/
+#main_wrapper
+{
+    width: 900px;
+    margin: auto;
+	background-image: linear-gradient(bottom, rgb(150,170,180) 21%, rgb(54,115,156) 61%);
+	background-image: -o-linear-gradient(bottom, rgb(150,170,180) 21%, rgb(54,115,156) 61%);
+	background-image: -moz-linear-gradient(bottom, rgb(150,170,180) 21%, rgb(54,115,156) 61%);
+	background-image: -webkit-linear-gradient(bottom, rgb(150,170,180) 21%, rgb(54,115,156) 61%);
+	background-image: -ms-linear-gradient(bottom, rgb(150,170,180) 21%, rgb(54,115,156) 61%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.21, rgb(150,170,180)),
+	color-stop(0.61, rgb(54,115,156))
+	
+	);
+	padding: 10px;
+	border-radius:10px;
+	box-shadow: 0px 4px 8px #124465;
+}
+
+body
+{
+	
+	background-color: #69a6ce;
+	font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #f4a94a;
+
+
+
+}
+
+header
+{
+	/*border: 2px solid #000000;*/
+	position: relative;
+	margin-bottom: 10px;
+	border-bottom-color:#f4a94a;
+	border-bottom:solid 3px;
+}
+#header li a:hover{
+  color:#f4a94a;
+}
+header > ul{
+	list-style-type: none;
+	position:absolute;
+	right:0em;
+	bottom:0em;
+	margin-bottom:0em;
+}
+
+
+header a
+{
+	position: relative;
+	right: 5px;
+	bottom: 0px;
+	text-decoration:none;
+	color:#124465;
+}
+
+#main_nav li
+{
+	display: inline-block;
+	border: 2px solid #69a6ce;
+	border-radius: 5px;
+	padding: 2px;
+	background-color: #69a6ce;
+}
+#main_nav li a
+{
+	text-decoration:none;
+	color:#124465;	
+}
+
+#main_nav li a:hover
+{
+	color:#f4a94a;
+}
+
+#main_nav
+{
+	/*border: 2px solid #000000;*/
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+section
+{
+	/*border: 2px solid #000000;*/
+}
+
+aside
+{
+	display: inline-block;
+	/*border: 2px solid #000000;*/
+	vertical-align: top;
+}
+
+article
+{
+	width: 700px;
+	height: 400px;
+	display: inline-block;
+	/*border: 2px solid #000000;*/
+}

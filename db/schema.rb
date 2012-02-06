@@ -11,7 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120201231601) do
+ActiveRecord::Schema.define(:version => 20120206143152) do
+
+  create_table "bookings", :force => true do |t|
+    t.datetime "date_of_departure"
+    t.datetime "date_of_arrival"
+    t.boolean  "collect"
+    t.integer  "user_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "car_class"
+    t.string   "booking_address"
+    t.string   "booking_postcode"
+    t.string   "promocode"
+  end
+
+  create_table "cars", :force => true do |t|
+    t.string   "reg"
+    t.string   "model"
+    t.string   "class"
+    t.boolean  "repair"
+    t.integer  "booking_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"

@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Scars</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+    <head>
+     <title>Scars</title>
+     <%= stylesheet_link_tag    "application", :media => "all" %>
+     <%= javascript_include_tag "application" %>
+     <%= csrf_meta_tags %>
+    </head>
+	<body>
+	 <div id="main_wrapper">
+	  <header>
+	   <%= image_tag("logo.png", :alt => "Sample App") %>
+	   <%= flash[:notice] %>
+	   <% if current_user %>
+        <p>Logged in as <%= current_user.email %>.</p>
+        <%= link_to "Logout", "/logout" %>
+        <% else %>
+        <ul>
+         <li><%= link_to "Login", new_session_path %></li>
+         <li><%= link_to "Signup", new_user_path %></li>
+		</ul>
+       <% end %>
+	  </header>
+	 <div id="main_nav">
+	  <nav>
+	   <ul>
+	    <li><%= link_to 'Home', root_path%></li>
+	    <li><%=link_to 'Booking', booking_path%></li>
+	    <li><a href="#"> Contact</a></li>
+	    <li><a href="#"> About</a></li>
+	   </ul>
+	  </nav>
+	 </div>
+	 <section>
+	  <article>
+	   <%= yield %>
+	  </article>
+	  <aside>
+	   <h1>New Offer </h1>
+	   <img src="Images/bulle.png" alt="" id="fleche_bulle" />
+	  </aside>
+	 </section>
+	 <footer>
+	  <div id="rights"> All content belongs to Clear Solutions </div>
+	 </footer>
+	</div>
+   </body>
 </html>
