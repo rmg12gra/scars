@@ -21,5 +21,9 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
  </div>
+ <div>
+  <%= f.label :is_admin %>
+  <%= f.check_box :is_admin, default: false %>
+ </div>
  <div class="actions"><%= f.submit %></div>
 <% end %>
