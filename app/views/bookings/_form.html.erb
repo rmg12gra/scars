@@ -12,19 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :date_of_departure %> <br />
-    <%= f.datetime_select :date_of_departure %>
+    <%= f.label :date_of_departure, "Departure date:" %>
+    <%= f.date_select :date_of_departure %>
   </div>
   <div class="field">
-    <%= f.label :date_of_arrival %><br />
-    <%= f.datetime_select :date_of_arrival %>
+    <%= f.label :date_of_arrival, "Return date:" %>
+    <%= f.date_select :date_of_arrival %>
   </div>
   <div class="field">
-    <%= f.label :collect %><br />
-    <%= f.check_box :collect %>
+    <%= f.select :collect,[["I want my car delivered",false],["I want to collect My Car",true]] %>
   </div>
   <div class="field">
-	<%= f.label :car_class%><br />
+	<%= f.label :car_class%>
 	<%= f.select :car_class, [['Sport','sport'],['Peope Carrier','people_carrier'],['HatchBack','hatchback']]%>
   </div>
   <div class="field">
@@ -32,7 +31,7 @@
 	<%= f.text_field :booking_postcode%>
   </div>
   <div class="field">
-	<%= f.label :booking_address%>
+	<%= f.label :booking_address%><br/>
 	<%= f.text_area :booking_address, :size =>"25x3"%>
   </div>
   <div class="field">

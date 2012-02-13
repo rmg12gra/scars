@@ -30,6 +30,7 @@ class BookingsController < ApplicationController
       format.html # new.html.erb
       format.json { render json: @booking }
     end
+	
   end
 
   # GET /bookings/1/edit

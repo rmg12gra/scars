@@ -91,12 +91,20 @@ section
 {
 	/*border: 2px solid #000000;*/
 }
-
+article form{
+	background-color:#69a6ce;
+	border-radius:5px;
+}
+article h1{
+	margin-bottom:0px;
+}
 aside
 {
 	display: inline-block;
 	/*border: 2px solid #000000;*/
 	vertical-align: top;
+	background-color:#69a6ce;
+
 }
 
 article

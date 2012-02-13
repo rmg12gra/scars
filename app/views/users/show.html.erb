@@ -1,5 +1,7 @@
-<p>
-<%= @user.id %>
-<%= @user.email %>
-<%= @user.password_digest %>
-</p>
+<h1>Profile:</h1>
+<p>User ID: <%= @user.id %></p>
+<p>Customer ID: <%= @customer.id unless @user.is_admin %></p>
+<p>Email:  <%= @user.email %></p>
+<% if @user.is_admin %>
+<p>Administrator</p>
+<% end %>
