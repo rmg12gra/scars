@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  amount: 1
+  payement_type: MyString
+  booking_id: 1
+  payement_date: 2012-02-06 19:56:16
+
+two:
+  amount: 1
+  payement_type: MyString
+  booking_id: 1
+  payement_date: 2012-02-06 19:56:16

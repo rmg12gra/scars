@@ -16,16 +16,21 @@
         <%= link_to "Logout", "/logout" %>
         <% else %>
         <ul>
-         <li><%= link_to "Login", new_session_path %></li>
-         <li><%= link_to "Signup", new_user_path %></li>
+         <li id="main_login"><a href="#" onclick=myFunction();>Login<%= image_tag("arrow_down.png", :alt => "Arrow Down", :id => "Arrow") %></a></li>
 		</ul>
        <% end %>
+	   <div id="login_dropdown">
+			<p>Username<br />
+			<input type="text" /></p>
+			<p>Password<br />
+			<input type="password" /><br />
+			<a href="#"><%=link_to "Not Registered?", new_user_path%></a></p>
 	  </header>
 	 <div id="main_nav">
 	  <nav>
 	   <ul>
 	    <li><%= link_to 'Home', root_path%></li>
-	    <li><%=link_to 'Booking', booking_path%></li>
+	    <li><%=link_to 'Booking', new_booking_path%></li>
 	    <li><a href="#"> Contact</a></li>
 	    <li><a href="#"> About</a></li>
 	   </ul>
@@ -45,4 +50,21 @@
 	 </footer>
 	</div>
    </body>
+   
+   <script>
+   function myFunction(){
+   var drop = document.getElementById('login_dropdown');
+   var arrow = document.getElementById('Arrow');
+	if(drop.style.display == "block"){
+		drop.style.display = "none";
+		arrow.src = "/assets/arrow_down.png";
+		arrow.alt = "Arrow Down";
+	}
+	else{
+		drop.style.display = "block";
+		arrow.src = "/assets/arrow_up.png";
+		arrow.alt = "Arrow Up";
+	}
+   }
+   </script>
 </html>

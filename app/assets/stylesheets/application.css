@@ -54,24 +54,21 @@ header > ul{
 
 header a
 {
-	position: relative;
-	right: 5px;
-	bottom: 0px;
-	text-decoration:none;
-	color:#124465;
+	
 }
 
 #main_nav li
 {
 	display: inline-block;
-	border: 2px solid #69a6ce;
+	border: 2px solid #F4A94A;
 	border-radius: 5px;
-	padding: 2px;
-	background-color: #69a6ce;
+	padding: 5px;
+	background-color: #F4A94A;
 }
 #main_nav li a
 {
 	text-decoration:none;
+	font-size: 1.5em;
 	color:#124465;	
 }
 
@@ -91,20 +88,12 @@ section
 {
 	/*border: 2px solid #000000;*/
 }
-article form{
-	background-color:#69a6ce;
-	border-radius:5px;
-}
-article h1{
-	margin-bottom:0px;
-}
+
 aside
 {
 	display: inline-block;
 	/*border: 2px solid #000000;*/
 	vertical-align: top;
-	background-color:#69a6ce;
-
 }
 
 article
@@ -114,3 +103,49 @@ article
 	display: inline-block;
 	/*border: 2px solid #000000;*/
 }
+
+#main_login a
+{
+	border : 2px solid #F4A94A;
+	padding-left : 5px;
+	padding-right : 5px;
+	padding-top : 5px;
+	border-radius: 5px;
+	background-color : #F4A94A;
+	position: relative;
+	bottom: 0px;
+	text-decoration:none;
+	color:#124465;
+}
+
+#login_dropdown
+{
+	position: absolute;
+	background-color: white;
+	padding: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	box-shadow: 0px 4px 8px #124465;
+	display: none;
+	right: 0px;
+}
+
+#login_dropdown p
+{
+	margin-top: 0px;
+}
+
+#Arrow
+{
+	padding-left: 5px;
+}
+
+/*#Line
+{
+	padding-bottom: 7px;
+}*/
+/*
+#main_nav
+{
+	background: url('/assets/Line.png') repeat-x bottom;
+}*/
