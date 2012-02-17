@@ -13,30 +13,36 @@
 
   <div class="field">
     <%= f.label :date_of_departure, "Departure date:" %>
-    <%= f.date_select :date_of_departure %>
+    <div id = "dod"><%= f.date_select :date_of_departure %></div>
   </div>
   <div class="field">
     <%= f.label :date_of_arrival, "Return date:" %>
-    <%= f.date_select :date_of_arrival %>
+    <div id "dor"><%= f.date_select :date_of_arrival %></div>
   </div>
+  
+  <div class="field">
+	<%= f.label :car_class, "Car Class:"%>
+	<%= f.select :car_class, [['Sport','sport'],['Peope Carrier','people_carrier'],['HatchBack','hatchback']]%>
+  </div>
+  
   <div class="field">
     <%= f.select :collect,[["I want my car delivered",false],["I want to collect My Car",true]] %>
   </div>
+  
+  
   <div class="field">
-	<%= f.label :car_class%>
-	<%= f.select :car_class, [['Sport','sport'],['Peope Carrier','people_carrier'],['HatchBack','hatchback']]%>
-  </div>
-  <div class="field">
-	<%= f.label :booking_postcode%>
-	<%= f.text_field :booking_postcode%>
-  </div>
-  <div class="field">
-	<%= f.label :booking_address%><br/>
+	<%= f.label :booking_address, "Booking Address:"%>
 	<%= f.text_area :booking_address, :size =>"25x3"%>
   </div>
+  
   <div class="field">
-	<%= f.label :promocode%>
-	<%= f.text_field :promocode%>
+	<%= f.label :booking_postcode, "PostCode:"%>
+	<%= f.text_field :booking_postcode, :size =>7%><br/>
+  </div>
+  
+  <div class="field">
+	<%= f.label :promocode, "Promocode:"%>
+	<%= f.text_field :promocode%><br/>
   </div>
   <div class="actions">
     <%= f.submit %>

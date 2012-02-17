@@ -1,4 +1,5 @@
-
+<%= stylesheet_link_tag    "newUser" %>
+<h1>Sign Up</h1>
 <%= form_for @user do |f| %>
  <% if @user.errors.any? %>
   <div class="error_messages">
@@ -11,19 +12,19 @@
   </div>
  <% end %>
  <div class="field">
-  <%= f.label :email %>
-  <%= f.text_field :email %>
+  <%= f.label :email, "Email:" %>
+  <%= f.text_field :email%><br/>
  </div>
  <div class="field">
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.label :password, "Password: " %>
+  <%= f.password_field :password %><br/><br/>
  </div>
  <div>
-  <%= f.label :password_confirmation %>
+  <%= f.label :password_confirmation, "Confirm Password: " %><br/>
   <%= f.password_field :password_confirmation %>
  </div>
  <div>
-  <%= f.label :is_admin %>
+  <%= f.label :is_admin, "Admin: " %>
   <%= f.check_box :is_admin, default: false %>
  </div>
  <div class="actions"><%= f.submit %></div>

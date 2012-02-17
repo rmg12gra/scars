@@ -11,8 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20120206143152) do
+ActiveRecord::Schema.define(:version => 20120206195615) do
 
   create_table "bookings", :force => true do |t|
     t.datetime "date_of_departure"
@@ -36,8 +35,6 @@ ActiveRecord::Schema.define(:version => 20120206143152) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
-=======
-ActiveRecord::Schema.define(:version => 20120202222100) do
 
   create_table "customers", :force => true do |t|
     t.integer  "user_id"
@@ -48,7 +45,15 @@ ActiveRecord::Schema.define(:version => 20120202222100) do
   end
 
   add_index "customers", ["user_id"], :name => "index_customers_on_user_id"
->>>>>>> 886cd31c67208343091a9ff0c0dc76cc60e5cb5d
+
+  create_table "payements", :force => true do |t|
+    t.integer  "amount"
+    t.string   "payement_type"
+    t.integer  "booking_id"
+    t.datetime "payement_date"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"
